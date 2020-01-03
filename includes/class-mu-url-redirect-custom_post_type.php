@@ -111,7 +111,7 @@ class Mu_Url_Redirect_Custom_Post_Type {
 
         $has_archive = false;
         $rewrite     = array(
-            'slug'       => 're-url',
+            'slug'       => 'urlto',
             'with_front' => false,
             'feeds'      => true,
             'pages'      => false
