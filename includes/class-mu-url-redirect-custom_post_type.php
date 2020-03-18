@@ -294,7 +294,7 @@ class Mu_Url_Redirect_Custom_Post_Type {
                     $base_url = $mu_url_url;
                 }
             }
-            if (!empty($base_url) && $_GET['preview'] != 'true') {
+            if (!empty($base_url) && (empty($_GET['preview']) || $_GET['preview'] != 'true')) {
                 $re_times = get_post_meta($post->ID, 'mu_url_redirect_times', true);
                 $re_times = absint($re_times) + 1;
                 update_post_meta($post->ID, 'mu_url_redirect_times', $re_times);
